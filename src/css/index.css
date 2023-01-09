@@ -29,6 +29,7 @@ body{
     flex-direction: column;
     margin: 1rem;
     gap: 1rem;
+    z-index: 2;
 }
 .contact::after{
     content: '';
