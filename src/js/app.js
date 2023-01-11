@@ -42,7 +42,7 @@ Array.from(barras.children).forEach((barra)=>{
 const opciones = {
     root:null,
     rootMargin:'0px',
-    threshold: 0.5
+    threshold: .5
 
   }
 
@@ -79,6 +79,7 @@ const observerText = new IntersectionObserver(textoSale,opciones)
 // Mantener las barrar fijar 
 function fijarBarras(entries){
     entries.forEach(entry => {
+      
         if(entry.isIntersecting){
             barras.style.position = 'fixed'
 
@@ -117,3 +118,35 @@ document.getElementById('aboutMeBack').addEventListener('click', mostrarText )
 function addEffectBar(){
 
 }
+
+/*************EFECTO DE LETRAS */
+function showItens(entries){
+    entries.forEach(entry =>{
+
+        
+        
+            if(entry.isIntersecting){
+                const elementos = Array.from(entry.target.querySelectorAll('*[effect="true"]'))
+                elementos.forEach(elemento => {
+                  elemento.classList.add('slide-out-right')
+                  elemento.classList.remove('slide-out-right2')
+                    
+                })
+    
+            } else{
+                const elementos = Array.from(entry.target.querySelectorAll('*[effect="true"]'))
+                elementos.forEach(elemento => {
+                  elemento.classList.add('slide-out-right2')
+                  elemento.classList.remove('slide-out-right')
+                    
+                })
+            }
+       
+
+    })
+}
+const tryEffect = new IntersectionObserver(showItens, opciones)
+tryEffect.observe(aboutMe)
+window.addEventListener('DOMMouseScroll',(e)=>{
+    console.log(e)
+})

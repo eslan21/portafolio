@@ -19,6 +19,7 @@ body{
     background: -webkit-linear-gradient(74deg, #6C82AD 0%, #0D1B39 100%);
     background: linear-gradient(74deg, #6C82AD 0%, #0D1B39 100%);
     overflow-x: hidden;
+    scroll-behavior: smooth;
 }
 /*#000a8d*/
 .contact{
@@ -43,7 +44,12 @@ body{
 }
 .contact a{
     text-decoration: none;
-    color: #006fff;
+    color: #55ACEE;
+    text-shadow: -1px -1px 1px rgba(255,255,255,.1), 1px 1px 1px rgba(0,0,0,.5);
+    transition: .5s;
+}
+.contact a:hover{
+    color:white ;
 }
 .container{
     display: flex;
@@ -51,7 +57,7 @@ body{
     flex-wrap: wrap;
     position: relative;
     max-width: 100vw;
-    scroll-snap-align: center;
+    scroll-snap-align: start;
     height:100vh;
     scroll-behavior: smooth;
     overflow: hidden;
@@ -62,7 +68,7 @@ body{
     bottom: 0;
   z-index: -1;
     width: 100%;
-    opacity: .6;
+    opacity: .3;
 }
 
 
@@ -131,10 +137,9 @@ body{
    
     display: flex;
     flex-wrap: wrap;
-
     align-items: center;
     width: 100vw;
-    scroll-snap-align: center;
+    scroll-snap-align: start;
     height:100vh;
     scroll-behavior: smooth;
     
@@ -146,6 +151,7 @@ body{
     overflow-x: hidden;
     height: 100%;
     transition: .5s;
+    opacity: 0;
 }
 .aboutMeText{
     flex-shrink: 0;
@@ -343,7 +349,7 @@ body{
 }
 .imgAbourMe{
     object-fit: cover;
-   
+   opacity: 0;
    max-width: 100%;
    max-height: 100%;
    border-radius:44% 56% 35% 65% / 63% 30% 70% 37% ;
@@ -400,7 +406,7 @@ body{
     .container2{
         justify-content: center;
        position: relative;
-        scroll-snap-align: start;
+        
     }
     .container2 >.container2DivImg{
         
@@ -439,23 +445,10 @@ body{
     .container2Div{    
         flex-basis: auto;
         min-height: 100%;
-        scroll-snap-align:start;
+       
         width: 100%;
     }
-    .side{
-        position: absolute;
-        -webkit-box-shadow: 9px 2px 10px -2px rgba(0,0,0,0.44); 
-        box-shadow: 9px 2px 10px -2px rgba(0,0,0,0.44);
-        background: #e9e9e9;
-        height: 30%;
-        width: 100%;
-        left: 0;
-        bottom: 0;
-        top: auto;
-        z-index: 1;
-        transform: 0.5s;
-        background-image: url("data:image/svg+xml,%3csvg xmlns='http://www.w3.org/2000/svg' version='1.1' xmlns:xlink='http://www.w3.org/1999/xlink' xmlns:svgjs='http://svgjs.com/svgjs' width='1440' height='540' preserveAspectRatio='none' viewBox='0 0 1440 540' deluminate_imageType='png'%3e%3cg mask='url(%26quot%3b%23SvgjsMask1105%26quot%3b)' fill='none'%3e%3cpath d='M581 170L16 169' stroke-width='8' stroke='url(%23SvgjsLinearGradient1106)' stroke-linecap='round' class='Right'%3e%3c/path%3e%3cpath d='M517 372L-14 371' stroke-width='10' stroke='url(%23SvgjsLinearGradient1106)' stroke-linecap='round' class='Right'%3e%3c/path%3e%3cpath d='M712 85L99 84' stroke-width='10' stroke='url(%23SvgjsLinearGradient1106)' stroke-linecap='round' class='Right'%3e%3c/path%3e%3cpath d='M1094 304L723 303' stroke-width='6' stroke='url(%23SvgjsLinearGradient1107)' stroke-linecap='round' class='Left'%3e%3c/path%3e%3cpath d='M18 224L517 223' stroke-width='6' stroke='url(%23SvgjsLinearGradient1106)' stroke-linecap='round' class='Right'%3e%3c/path%3e%3cpath d='M755 528L274 527' stroke-width='6' stroke='url(%23SvgjsLinearGradient1106)' stroke-linecap='round' class='Right'%3e%3c/path%3e%3cpath d='M193 328L-267 327' stroke-width='6' stroke='url(%23SvgjsLinearGradient1106)' stroke-linecap='round' class='Right'%3e%3c/path%3e%3cpath d='M1171 201L1691 200' stroke-width='10' stroke='url(%23SvgjsLinearGradient1106)' stroke-linecap='round' class='Right'%3e%3c/path%3e%3cpath d='M1318 72L559 71' stroke-width='10' stroke='url(%23SvgjsLinearGradient1107)' stroke-linecap='round' class='Left'%3e%3c/path%3e%3cpath d='M231 443L617 442' stroke-width='10' stroke='url(%23SvgjsLinearGradient1107)' stroke-linecap='round' class='Left'%3e%3c/path%3e%3cpath d='M1410 217L1826 216' stroke-width='10' stroke='url(%23SvgjsLinearGradient1107)' stroke-linecap='round' class='Left'%3e%3c/path%3e%3cpath d='M842 480L258 479' stroke-width='10' stroke='url(%23SvgjsLinearGradient1107)' stroke-linecap='round' class='Left'%3e%3c/path%3e%3cpath d='M1270 68L592 67' stroke-width='8' stroke='url(%23SvgjsLinearGradient1106)' stroke-linecap='round' class='Right'%3e%3c/path%3e%3cpath d='M604 187L1111 186' stroke-width='8' stroke='url(%23SvgjsLinearGradient1107)' stroke-linecap='round' class='Left'%3e%3c/path%3e%3c/g%3e%3cdefs%3e%3cmask id='SvgjsMask1105'%3e%3crect width='1440' height='540' fill='white'%3e%3c/rect%3e%3c/mask%3e%3clinearGradient x1='0%25' y1='0%25' x2='100%25' y2='0%25' id='SvgjsLinearGradient1106'%3e%3cstop stop-color='rgba(0%2c 0%2c 0%2c 0)' offset='0'%3e%3c/stop%3e%3cstop stop-color='rgba(0%2c 0%2c 0%2c 1)' offset='1'%3e%3c/stop%3e%3c/linearGradient%3e%3clinearGradient x1='100%25' y1='0%25' x2='0%25' y2='0%25' id='SvgjsLinearGradient1107'%3e%3cstop stop-color='rgba(0%2c 0%2c 0%2c 0)' offset='0'%3e%3c/stop%3e%3cstop stop-color='rgba(0%2c 0%2c 0%2c 1)' offset='1'%3e%3c/stop%3e%3c/linearGradient%3e%3c/defs%3e%3c/svg%3e");
-    }
+   
         .options{
             
             bottom: auto;   
@@ -470,14 +463,12 @@ body{
             
             position: absolute;
             right: -30%;
-            color: #0b1fb5;
+            
             font-size: 1.5em;
-            font-family: "Montserrat Subrayada", sans-serif;
-            font-weight: bold;
-            text-align: center;
+            
             
             letter-spacing: 2px;
-            color: #006fff;
+            color: #ffffff;
         }
         .title{
             position: absolute;

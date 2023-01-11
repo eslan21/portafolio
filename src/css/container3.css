@@ -1,12 +1,12 @@
 .container3{
     width: 100vw;
     height: 100vh;
-    scroll-snap-align: center;
+    scroll-snap-align: start;
     display: flex;
     flex-shrink: 0;
     position: relative;
     overflow-x: hidden;
-    scroll-behavior: smooth;
+    
 
 }
 .container3 > .project{
