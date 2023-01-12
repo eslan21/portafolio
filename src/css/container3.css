@@ -6,11 +6,16 @@
     flex-shrink: 0;
     position: relative;
     overflow-x: hidden;
-    
-
 }
-.container3 > .project{
-    position: relative;
+.projectContainer{
+    display: flex;
+    width: 100%;
+    height: 100%;
+    overflow: hidden;
+    scroll-behavior: smooth;
+}
+ .project{
+    
     transition: .5s;
     flex-shrink: 0;
     width: 100%;
@@ -18,40 +23,53 @@
     display: flex;
     align-items: flex-end;
     flex-direction: column;
-    
-  
 }
-.container3 > .project .subContainer{
+.project .subContainer{
     flex-grow: 2;
     margin: 2rem;
     max-height: 30%;
-   
-    
+}
+ .project .subContainerImg{
+    flex-grow: 1;
+    align-self: center; 
+    position: relative; 
+}
+.subContainerImg a{
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-color: rgba(88, 213, 255, 0.359);
+}
+.subContainerImg::after{
 
 }
-.container3 > .project .subContainerImg{
-    flex-grow: 1;
-    align-self: center;
-    
-    
-}
-.container3 > div div img {
+ .subContainerImg img {
     border-radius: 10px;
    width: 70%;
    box-shadow: 0px 10px 15px 2px rgba(0,0,0,0.1),0px 10px 15px -3px rgba(0,0,0,0.1),0px 10px 15px -3px rgba(0,0,0,0.1),0px 10px 15px 0px rgba(0,0,0,0.1);
-    margin-left:2rem ;
-    
-   
+    margin-left:2rem ; 
 }
-.container3 > div > div h2{   
+.subContainerImg  img::after{
+    content: ' Go to Website';
+    position: absolute;
+    top: 0;
+    left: 0;
+    width:100% ;
+    height: 100%;
+    text-align: center;
+    background-color: rgba(250, 235, 215, 0.467);
+
+}
+.subContainer h2{   
     font-size: 3em;
     font-family: 'Roboto', sans-serif;
     font-weight: bold;
     text-shadow: -1px -1px 1px rgba(255,255,255,.1), 1px 1px 1px rgba(0,0,0,.5);
     color: rgb(255, 255, 255);
 }
-
-.container3 > div > div p{
+.subContainer p{
    
     font-family: 'Be Vietnam Pro', sans-serif;
     color: #ffffff;
@@ -80,13 +98,11 @@
     background-color: rgb(255, 255, 255);
     border-radius: 10px;
     transition: .5s;
-
-    
-    
-
-
 }
 .activeBar{
     transform: scale(1.2) translateY(-10px);
-    
+}
+
+.stopScroll{
+    overflow: hidden;
 }

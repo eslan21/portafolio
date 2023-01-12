@@ -90,8 +90,8 @@ function fijarBarras(entries){
         }
     })
 }
-const observarBarra = new IntersectionObserver(fijarBarras,opciones) 
-observarBarra.observe(container3)
+// const observarBarra = new IntersectionObserver(fijarBarras,opciones) 
+// observarBarra.observe(container3)
 
 
 /*************** Mostrar texto en about me******************/
@@ -109,6 +109,9 @@ function mostrarText(e){
    document.querySelector('.html-bar').style.width = '80%'
    document.querySelector('.bt-bar').style.width = '50%'
    document.querySelector('.react-bar').style.width = '60%'
+   document.querySelector('html').classList.toggle('stopScroll')
+
+   
    
 }
 
@@ -122,9 +125,6 @@ function addEffectBar(){
 /*************EFECTO DE LETRAS */
 function showItens(entries){
     entries.forEach(entry =>{
-
-        
-        
             if(entry.isIntersecting){
                 const elementos = Array.from(entry.target.querySelectorAll('*[effect="true"]'))
                 elementos.forEach(elemento => {
@@ -132,7 +132,6 @@ function showItens(entries){
                   elemento.classList.remove('slide-out-right2')
                     
                 })
-    
             } else{
                 const elementos = Array.from(entry.target.querySelectorAll('*[effect="true"]'))
                 elementos.forEach(elemento => {
@@ -141,8 +140,6 @@ function showItens(entries){
                     
                 })
             }
-       
-
     })
 }
 const tryEffect = new IntersectionObserver(showItens, opciones)
@@ -150,3 +147,6 @@ tryEffect.observe(aboutMe)
 window.addEventListener('DOMMouseScroll',(e)=>{
     console.log(e)
 })
+
+//// disable scroll
+
